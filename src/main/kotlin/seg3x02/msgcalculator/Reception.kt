@@ -7,7 +7,6 @@ import org.springframework.stereotype.Component
 class Reception {
     @RabbitListener(queues = ["calculator-queue"])
     fun receive(msg: String) : String {
-        // val user = msg.split(":")[0]
         println(msg)
         return("Received: $msg")
     }
